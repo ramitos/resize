@@ -1,0 +1,7 @@
+{
+  "name": "resize",
+  "repo": "ramitos/resize",
+  "version": "0.0.1",
+  "scripts": ["resize.js"],
+  "main": "resize.js"
+}
