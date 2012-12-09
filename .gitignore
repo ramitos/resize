@@ -1,3 +1,4 @@
 components
-build
-index.html
+src
+component.json
+readme.md

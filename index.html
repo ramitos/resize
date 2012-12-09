@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src='build/build.js'></script>
+    <style>
+      body, html {
+        margin: 0px;
+      }
+      
+      .header {
+        border-bottom: 1px solid #BBB;
+        background-color: whiteSmoke;
+        padding: 5px;
+        height: 21px;
+      }
+      
+      #ta {
+        margin: 10px;
+      }
+      
+      #unbind, #bind {
+        float: right;
+      }
+      
+      .height, .width {
+        font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, sans-serif;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='header'>
+      <span class='height'>Offset Height: </span><span id='height'></span>
+      <span class='width'>Offset Width: </span><span id='width'></span>
+      <button id='unbind'>unbind</button>
+      <button id='bind'>bind</button>
+    </div>
+    <textarea id='ta' rows='10'></textarea>
+    <script>
+      var heightel = document.getElementById('height');
+      var widthel = document.getElementById('width');
+      var unbind = document.getElementById('unbind');
+      var ta = document.getElementById('ta');
+      var resize = require('resize');
+      
+      heightel.innerHTML = ta.offsetHeight;
+      widthel.innerHTML = ta.offsetWidth;
+      
+      var onresize = function (element) {
+        heightel.innerHTML = element.offsetHeight;
+        widthel.innerHTML = element.offsetWidth;
+      };
+      
+      resize.bind(ta, onresize, 100);
+      
+      unbind.addEventListener('click', function () {
+        resize.unbind(ta, onresize);
+        e.preventDefault();
+      });
+      
+      bind.addEventListener('click', function () {
+        resize.bind(ta, onresize, 100);
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>
