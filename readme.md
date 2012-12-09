@@ -13,7 +13,7 @@ $ component install ramitos/resize
 ```js
 var resize = require('resize');
 
-resize.bind(document.getElementById('mytagname'), function (height, width) {});
+resize.bind(document.getElementById('mytextarea'), function (height, width) {});
 ```
 
 ## api
