@@ -1,7 +1,15 @@
 {
   "name": "resize",
   "repo": "ramitos/resize",
-  "version": "0.0.1",
-  "scripts": ["resize.js"],
-  "main": "resize.js"
+  "twitter": "@ramitos",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "src/resize.js",
+  "scripts": [
+    "src/resize.js"
+  ],
+  "dependencies": {
+    "ramitos/iseventsupported": "*",
+    "component/event": "*"
+  }
 }
