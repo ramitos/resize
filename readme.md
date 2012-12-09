@@ -14,7 +14,7 @@ $ component install ramitos/resize
 var resize = require('resize');
 
 resize.bind(document.getElementById('mytagname'), function (height, width) {});
-``
+```
 
 ## api
 
