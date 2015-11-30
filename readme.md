@@ -1,3 +1,5 @@
+![deprecated](https://img.shields.io/badge/status-deprecated-red.svg?style=plastic)
+
 # resize
 
 resize event for any DOM element with polling. [demo](http://ramitos.github.com/resize)
